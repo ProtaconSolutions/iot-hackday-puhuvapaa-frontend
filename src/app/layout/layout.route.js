@@ -38,11 +38,6 @@
         config: {
           abstract: true,
           views: {
-            sidenav: {
-              templateUrl: '/talking-head-frontend/layout/sidenav.html',
-              controller: 'SidenavController',
-              controllerAs: 'vm'
-            },
             header: {
               templateUrl: '/talking-head-frontend/layout/header.html',
               controller: 'HeaderController',

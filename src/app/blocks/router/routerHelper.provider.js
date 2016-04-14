@@ -172,18 +172,11 @@
           stateCounts.errors++;
           handlingStateChangeError = true;
 
-          // State requires authenticated user.
-          if (error === 'AUTH_REQUIRED') {
-            $state.go('auth.login');
+          var message = _getErrorMessage(error, toState);
 
-            logger.error('Login required');
-          } else { // Otherwise show error message and redirect user to root (/)
-            var message = _getErrorMessage(error, toState);
+          logger.warning(message, toState);
 
-            logger.warning(message, toState);
-
-            $location.path('/');
-          }
+          $location.path('/');
         }
       }
 

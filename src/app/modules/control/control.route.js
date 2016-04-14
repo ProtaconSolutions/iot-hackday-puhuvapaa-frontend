@@ -2,18 +2,18 @@
   'use strict';
 
   /**
-   * Specify run block for talkingHeadFrontend.modules.home module.
+   * Specify run block for talkingHeadFrontend.modules.control module.
    *
    * @namespace Routes
    */
   angular
-    .module('talkingHeadFrontend.modules.home')
+    .module('talkingHeadFrontend.modules.control')
     .run(moduleRun);
 
   //////////
 
   /**
-   * @desc      Run block for talkingHeadFrontend.modules.home module.
+   * @desc      Run block for talkingHeadFrontend.modules.control module.
    * @namespace Home
    * @memberOf  Routes
    * @ngInject
@@ -26,7 +26,7 @@
 
   /**
    * @name      getStates
-   * @desc      Getter method for talkingHeadFrontend.modules.home module route definitions.
+   * @desc      Getter method for talkingHeadFrontend.modules.control module route definitions.
    * @memberOf  Routes.Home
    *
    * @returns {*[]}
@@ -34,14 +34,14 @@
   function getStates() {
     return [
       {
-        state: 'modules.home',
+        state: 'modules.control',
         config: {
           url: '/',
-          title: 'Home',
+          title: 'Control',
           views: {
             'content@': {
-              templateUrl: '/talking-head-frontend/modules/home/home.html',
-              controller: 'homeController',
+              templateUrl: '/talking-head-frontend/modules/control/control.html',
+              controller: 'controlController',
               controllerAs: 'vm'
             }
           }

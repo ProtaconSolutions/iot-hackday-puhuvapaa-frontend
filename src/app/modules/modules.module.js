@@ -8,6 +8,6 @@
    */
   angular
     .module('talkingHeadFrontend.modules', [
-      'talkingHeadFrontend.modules.home'
+      'talkingHeadFrontend.modules.control'
     ]);
 })();

@@ -5,6 +5,6 @@
  */
 {
   "config": {
-    "backendUrl": "localhost"
+    "backendUrl": "your_raspberry_pi_ip_address:5000"
   }
 }

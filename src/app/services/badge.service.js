@@ -5,7 +5,7 @@
    * @namespace   Services
    */
   angular
-    .module('badgeFrontend.services')
+    .module('talkingHeadFrontend.services')
     .factory('BadgeService', BadgeService);
 
   //////////

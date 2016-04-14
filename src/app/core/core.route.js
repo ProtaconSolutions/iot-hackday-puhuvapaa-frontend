@@ -7,7 +7,7 @@
    * @namespace Routes
    */
   angular
-    .module('badgeFrontend.core')
+    .module('talkingHeadFrontend.core')
     .run(appRun);
 
   //////////
@@ -61,10 +61,10 @@
         config: {
           url: '/404',
           title: '404',
-          parent: 'badgeFrontend',
+          parent: 'talkingHeadFrontend',
           views: {
             'content@': {
-              templateUrl: '/badge-frontend/core/404.html'
+              templateUrl: '/talking-head-frontend/core/404.html'
             }
           }
         }

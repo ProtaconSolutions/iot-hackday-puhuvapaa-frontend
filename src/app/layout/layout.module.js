@@ -2,10 +2,10 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.layout module.
+   * Initialization of talkingHeadFrontend.layout module.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.layout', []);
+    .module('talkingHeadFrontend.layout', []);
 })();

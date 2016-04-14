@@ -203,13 +203,13 @@ gulp.task('configFile', function() {
   } catch (error) {
     constants = {
       'config': {
-        'backendUrl': process.env.BADGE_BACKENDURL || 'http://localhost/'
+        'backendUrl': process.env.TALKING_HEAD_BACKENDURL || 'http://192.168.0.100:5000/'
       }
     }
   }
 
   return ngConstant({
-      name: 'badgeFrontend.config',
+      name: 'talkingHeadFrontend.config',
       templatePath: './src/app/config/template.ejs',
       space: '    ',
       constants: constants,
@@ -228,7 +228,7 @@ gulp.task('configPackage', function() {
   };
 
   return ngConstant({
-      name: 'badgeFrontend.config',
+      name: 'talkingHeadFrontend.config',
       templatePath: './src/app/config/template.ejs',
       space: '    ',
       constants: constants,

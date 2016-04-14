@@ -9,7 +9,6 @@
    * @memberOf  Core
    */
   angular
-    .module('badgeFrontend.core')
-    .constant('moment', moment)
+    .module('talkingHeadFrontend.core')
     .constant('_', _);
 })();

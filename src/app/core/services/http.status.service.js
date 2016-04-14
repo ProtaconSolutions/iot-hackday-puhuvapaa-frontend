@@ -5,7 +5,7 @@
    * @namespace Factories
    */
   angular
-    .module('badgeFrontend.core.services')
+    .module('talkingHeadFrontend.core.services')
     .factory('HttpStatusService', HttpStatusService);
 
   //////////

@@ -2,10 +2,10 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.core.interceptors module.
+   * Initialization of talkingHeadFrontend.core.interceptors module.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.core.interceptors', []);
+    .module('talkingHeadFrontend.core.interceptors', []);
 }());

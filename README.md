@@ -1,11 +1,10 @@
 # What is this?
 [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
-[![GitHub version](https://badge.fury.io/gh/ProtaconSolutions%2Fbadge-frontend.svg)](https://badge.fury.io/gh/ProtaconSolutions%2Fbadge-frontend)
-[![Dependency Status](https://david-dm.org/ProtaconSolutions/badge-frontend.svg)](https://david-dm.org/ProtaconSolutions/badge-frontend)
-[![devDependency Status](https://david-dm.org/ProtaconSolutions/badge-frontend/dev-status.svg)](https://david-dm.org/ProtaconSolutions/badge-frontend#info=devDependencies)
+[![GitHub version](https://badge.fury.io/gh/ProtaconSolutions%2Fiot-hackday-puhuvapaa-frontend.svg)](https://badge.fury.io/gh/ProtaconSolutions%2Fiot-hackday-puhuvapaa-frontend)
+[![Dependency Status](https://david-dm.org/ProtaconSolutions/iot-hackday-puhuvapaa-frontend.svg)](https://david-dm.org/ProtaconSolutions/iot-hackday-puhuvapaa-frontend)
+[![devDependency Status](https://david-dm.org/ProtaconSolutions/iot-hackday-puhuvapaa-frontend/dev-status.svg)](https://david-dm.org/ProtaconSolutions/iot-hackday-puhuvapaa-frontend#info=devDependencies)
 
-Badge frontend application which uses [AngularJS](https://angularjs.org/). 
-This frontend uses [badge-backend](https://github.com/ProtaconSolutions/badge-backend).
+Frontend application for [Talking Head IOT Hackday project](https://github.com/ProtaconSolutions/iot-hackday-puhuvapaa). 
 
 #  Table of Contents
 * [Main points](#main-points)
@@ -24,12 +23,7 @@ This frontend uses [badge-backend](https://github.com/ProtaconSolutions/badge-ba
 * [LICENSE](#license)
 
 ## Main points
-- [x] Gulp task to help development process
-- [ ] Build / deploy process
-- [ ] Material design
-- [ ] Configuration for each environment and/or developer
-- [ ] Configuration for each environment and/or developer
-- [ ] And all the _rest_
+TODO
 
 ## Requirements
 
@@ -60,7 +54,7 @@ See ```/src/app/config/config.json_example``` file and copy it to ```/src/app/co
 necessary changes to it.
  
 #### By ENV variable
-Just set ```BADGE_BACKENDURL``` ENV variable and then application will use that within ```gulp serve``` and ```gulp dist``` commands. 
+Just set ```TALKING_HEAD_BACKENDURL``` ENV variable and then application will use that within ```gulp serve``` and ```gulp dist``` commands. 
 
 ## Development
 To start developing in the project run:
@@ -108,9 +102,9 @@ And after that run that docker image by following command
 docker run -t -i yourimage
 ```
 
-With this docker image you can set following ENV variables to specify your database connection:
+With this docker image you can set following ENV variables to specify your Raspberry Pi IP-address.
 ```
-BADGE_BACKENDURL
+TALKING_HEAD_BACKENDURL
 ```
 
 ## Useful resources
@@ -122,6 +116,7 @@ BADGE_BACKENDURL
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
 
 ## Author
+[Protacon Solutions](https://www.protacon.com)
 [Tarmo Leppänen](https://github.com/tarlepp)
 
 ## LICENSE

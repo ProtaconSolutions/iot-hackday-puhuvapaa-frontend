@@ -2,12 +2,12 @@
   'use strict';
 
   /**
-   * Specify controller for badgeFrontend.layout module.
+   * Specify controller for talkingHeadFrontend.layout module.
    *
    * @namespace Controllers
    */
   angular
-    .module('badgeFrontend.layout')
+    .module('talkingHeadFrontend.layout')
     .controller('FooterController', FooterController);
 
   //////////

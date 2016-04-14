@@ -2,15 +2,15 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.dependencies module. This file contains all 3rd party dependencies that
+   * Initialization of talkingHeadFrontend.dependencies module. This file contains all 3rd party dependencies that
    * application has.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.dependencies', [
-      'ngAnimate', 'ngMaterial', 'ngMessages', 'ngSanitize', 'ngStorage',
+    .module('talkingHeadFrontend.dependencies', [
+      'ngAnimate', 'ngMaterial', 'ngMessages', 'ngSanitize',
       'ui.router',
-      'angular-jwt', 'angular-loading-bar', 'angular.img', 'angularMoment'
+      'angular-loading-bar'
     ]);
 })();

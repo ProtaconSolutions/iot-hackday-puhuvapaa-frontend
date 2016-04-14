@@ -2,14 +2,14 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.core module.
+   * Initialization of talkingHeadFrontend.core module.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.core', [
-      'badgeFrontend.core.auth', 'badgeFrontend.core.interceptors', 'badgeFrontend.core.services',
-      'badge-frontend-templates',
+    .module('talkingHeadFrontend.core', [
+      'talkingHeadFrontend.core.interceptors', 'talkingHeadFrontend.core.services',
+      'talking-head-frontend-templates',
       'blocks.exception', 'blocks.logger', 'blocks.router'
     ]);
 })();

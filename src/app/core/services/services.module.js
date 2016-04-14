@@ -2,10 +2,10 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.core.services module.
+   * Initialization of talkingHeadFrontend.core.services module.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.core.services', []);
+    .module('talkingHeadFrontend.core.services', []);
 }());

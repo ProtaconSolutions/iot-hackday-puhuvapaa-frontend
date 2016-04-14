@@ -25,7 +25,7 @@ RUN npm install
 RUN ./node_modules/bower/bin/bower install --allow-root
 
 # Set default ENV variable
-ENV BADGE_BACKENDURL http://localhost/
+ENV TALKING_HEAD_BACKENDURL http://192.168.0.100:5000/
 
 # Expose port 4000
 EXPOSE 4000

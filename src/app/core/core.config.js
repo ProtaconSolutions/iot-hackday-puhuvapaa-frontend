@@ -10,8 +10,8 @@
    *  }}
    */
   var config = {
-    appErrorPrefix: 'Badge - Error',
-    appTitle: 'Badge'
+    appErrorPrefix: 'Talking Head - Error',
+    appTitle: 'Talking Head'
   };
 
   /**
@@ -20,10 +20,9 @@
    * @namespace Core
    */
   angular
-    .module('badgeFrontend.core')
+    .module('talkingHeadFrontend.core')
     .value('config', config)
-    .config(moduleConfig)
-    .run(moduleRun);
+    .config(moduleConfig);
 
   //////////
 
@@ -39,13 +38,11 @@
    * @param {$mdThemingProvider}              $mdThemingProvider
    * @param {Providers.RouterHelperProvider}  routerHelperProvider
    * @param {Providers.ExceptionHandler}      exceptionHandlerProvider
-   * @param {jwtInterceptorProvider}          jwtInterceptorProvider
    * @constructor
    */
   function moduleConfig(
     $provide, $httpProvider, $logProvider, $mdThemingProvider,
-    routerHelperProvider, exceptionHandlerProvider,
-    jwtInterceptorProvider
+    routerHelperProvider, exceptionHandlerProvider
   ) {
     // Add filename + line number feature to $log component
     $provide.decorator('$log', function decorator($delegate) {
@@ -70,11 +67,6 @@
       $logProvider.debugEnabled(true);
     }
 
-    jwtInterceptorProvider.tokenGetter = ['$localStorage', function($localStorage) {
-      return $localStorage.token;
-    }];
-
-    $httpProvider.interceptors.push('jwtInterceptor');
     $httpProvider.interceptors.push('ErrorInterceptor');
 
     // Configure material design palettes
@@ -121,65 +113,5 @@
       // Call the original function with the new args.
       func.apply(func, args);
     };
-  }
-
-  /**
-   * @desc      Run block implementation for application.
-   * @namespace Run
-   * @memberOf  Core
-   * @ngInject
-   *
-   * @param {*}                     $rootScope
-   * @param {*}                     $state
-   * @param {*}                     $localStorage
-   * @param {Services.AuthService}  AuthService
-   * @param {Services.UserService}  UserService
-   */
-  function moduleRun(
-    $rootScope, $state, $localStorage,
-    AuthService, UserService
-  ) {
-    $rootScope.user = UserService.user();
-
-    // On reload check user data
-    _checkUser();
-
-    /**
-     * Route state change start event, this is needed for following:
-     *  1) Check if user is authenticated to access page, and if not redirect user back to login page
-     */
-    $rootScope.$on('$stateChangeStart', function stateChangeStart(event, toState) {
-      // On state change start check user data
-      _checkUser();
-
-      if (toState.hasOwnProperty('data') &&
-        toState.data.hasOwnProperty('access') &&
-        !AuthService.authorize(toState.data.access)
-      ) {
-        event.preventDefault();
-
-        $state.go('auth.login');
-      }
-    });
-
-    $rootScope.$watch(function() {
-      return angular.toJson($localStorage);
-    }, function() {
-      $rootScope.user = UserService.user();
-    });
-
-    ////////// Private function
-
-    /**
-     * Private helper function to check that user token is valid or not. If token has expired we need to erase it from
-     * local storage to make sure that everything works in application as smooth as possible.
-     *
-     * @private
-     */
-    function _checkUser() {
-      if (AuthService.isAuthenticated(true) === false) {
-        delete $localStorage.token;
-      }
-    }
   }
 })();

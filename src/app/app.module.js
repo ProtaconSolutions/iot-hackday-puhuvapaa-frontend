@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-    .module('badgeFrontend', [
-      'badgeFrontend.dependencies',
-      'badgeFrontend.modules',
-      'badgeFrontend.services',
-      'badgeFrontend.config',
-      'badgeFrontend.core',
-      'badgeFrontend.layout'
+    .module('talkingHeadFrontend', [
+      'talkingHeadFrontend.dependencies',
+      'talkingHeadFrontend.modules',
+      'talkingHeadFrontend.services',
+      'talkingHeadFrontend.config',
+      'talkingHeadFrontend.core',
+      'talkingHeadFrontend.layout'
     ]);
 })();

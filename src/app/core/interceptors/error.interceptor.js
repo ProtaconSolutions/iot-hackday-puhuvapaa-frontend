@@ -5,7 +5,7 @@
    * @namespace Interceptors
    */
   angular
-    .module('badgeFrontend.core.interceptors')
+    .module('talkingHeadFrontend.core.interceptors')
     .factory('ErrorInterceptor', ErrorInterceptor);
 
   //////////

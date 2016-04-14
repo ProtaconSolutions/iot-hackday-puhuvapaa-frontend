@@ -2,12 +2,12 @@
   'use strict';
 
   /**
-   * Specify controller for badgeFrontend.modules.home module.
+   * Specify controller for talkingHeadFrontend.modules.home module.
    *
    * @namespace Controllers
    */
   angular
-    .module('badgeFrontend.modules.home')
+    .module('talkingHeadFrontend.modules.home')
     .controller('homeController', homeController);
 
   //////////

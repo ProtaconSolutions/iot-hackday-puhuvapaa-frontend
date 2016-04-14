@@ -2,13 +2,12 @@
   'use strict';
 
   /**
-   * Initialization of badgeFrontend.modules module.
+   * Initialization of talkingHeadFrontend.modules module.
    *
    * @namespace Modules
    */
   angular
-    .module('badgeFrontend.modules', [
-      'badgeFrontend.modules.home',
-      'badgeFrontend.modules.badges'
+    .module('talkingHeadFrontend.modules', [
+      'talkingHeadFrontend.modules.home'
     ]);
 })();

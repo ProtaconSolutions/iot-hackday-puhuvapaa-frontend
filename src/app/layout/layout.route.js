@@ -2,18 +2,18 @@
   'use strict';
 
   /**
-   * Specify run block for badgeFrontend.layout module.
+   * Specify run block for talkingHeadFrontend.layout module.
    *
    * @namespace Routes
    */
   angular
-    .module('badgeFrontend.layout')
+    .module('talkingHeadFrontend.layout')
     .run(moduleRun);
 
   //////////
 
   /**
-   * @desc      Run block for badgeFrontend.layout module.
+   * @desc      Run block for talkingHeadFrontend.layout module.
    * @namespace Layout
    * @memberOf  Routes
    * @ngInject
@@ -34,22 +34,22 @@
   function getStates() {
     return [
       {
-        state: 'badgeFrontend',
+        state: 'talkingHeadFrontend',
         config: {
           abstract: true,
           views: {
             sidenav: {
-              templateUrl: '/badge-frontend/layout/sidenav.html',
+              templateUrl: '/talking-head-frontend/layout/sidenav.html',
               controller: 'SidenavController',
               controllerAs: 'vm'
             },
             header: {
-              templateUrl: '/badge-frontend/layout/header.html',
+              templateUrl: '/talking-head-frontend/layout/header.html',
               controller: 'HeaderController',
               controllerAs: 'vm'
             },
             footer: {
-              templateUrl: '/badge-frontend/layout/footer.html',
+              templateUrl: '/talking-head-frontend/layout/footer.html',
               controller: 'FooterController',
               controllerAs: 'vm'
             }

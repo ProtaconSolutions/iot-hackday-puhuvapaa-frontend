@@ -1,12 +1,13 @@
 {
-  "name": "badge-frontend",
+  "name": "talking-head-frontend",
   "main": [
     "/dist/frontend.min.js",
     "/dist/frontend.min.css"
   ],
-  "version": "0.0.2",
-  "description": "Frontend application for badge",
+  "version": "0.0.0",
+  "description": "Frontend application for Talking Head IOT Hackday project",
   "authors": [
+    "Protacon Ltd",
     "Tarmo Leppänen"
   ],
   "ignore": [
@@ -21,22 +22,13 @@
   "dependencies": {
     "angular": "1.5.3",
     "angular-animate": "1.5.3",
-    "angular-img-http-src": "0.1.0",
-    "angular-jwt": "0.0.9",
     "angular-loading-bar": "0.9.0",
     "angular-material": "1.0.6",
-    "angular-moment": "0.10.3",
     "angular-ui-router": "0.2.18",
     "angular-sanitize": "1.5.3",
     "lodash": "4.6.1",
-    "ngstorage": "0.3.10",
-    "mdi": "1.5.54",
-    "moment": "2.12.0"
+    "mdi": "1.5.54"
   },
   "devDependencies": {},
-  "overrides": {},
-  "resolutions": {
-    "angular": "1.5.3",
-    "moment": "2.12.0"
-  }
+  "overrides": {}
 }

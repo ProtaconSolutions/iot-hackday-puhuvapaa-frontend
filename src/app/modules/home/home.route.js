@@ -23,27 +23,7 @@
   function moduleRun(routerHelper) {
     routerHelper.configureStates(getStates());
   }
-  Commit failed with error:
-  pathspec 'src/app/core/auth/services/AuthService.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/modules/badges/badges.html' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/auth.route.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/modules/badges/badges.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/login/login.html' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/login/login.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/profile/profile.controller.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/constants/AccessLevels.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/constants/constants.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/auth.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/services/UserService.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/login/login.controller.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/profile/profile.html' did not match any file(s) known to git.
-    error: pathspec 'src/app/modules/badges/badges.controller.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/login/login.scss' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/profile/profile.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/profile/profile.route.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/modules/badges/badges.route.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/services/services.module.js' did not match any file(s) known to git.
-    error: pathspec 'src/app/core/auth/login/login.route.js' did not match any file(s) known to git.
+
   /**
    * @name      getStates
    * @desc      Getter method for talkingHeadFrontend.modules.home module route definitions.

@@ -1,0 +1,47 @@
+<md-toolbar class="md-whiteframe-z3">
+    <div class="md-toolbar-tools">
+        <md-list-item>
+            <md-button class="hide-gt-md md-icon-button md-button md-ink-ripple" aria-label="Toggle menu"
+                data-ng-click="vm.toggleSideMenu()"
+                data-ng-if="user"
+            >
+                <i class="md-title mdi mdi-menu"></i>
+            </md-button>
+
+            <md-button class="md-title" aria-label="Badges">
+                <a href="/">Badge</a>
+            </md-button>
+        </md-list-item>
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+
+        <md-list-item data-ng-show="!user">
+            <md-button aria-label="Login"
+                data-ui-sref="auth.login"
+            >
+                <i class="mdi mdi-login"></i>
+
+                Login
+            </md-button>
+        </md-list-item>
+
+        <md-list-item data-ng-show="user">
+            <md-button aria-label="Profile"
+                data-ui-sref="auth.profile"
+            >
+                <i class="mdi mdi-account"></i>
+
+                {{user.identifier}}
+            </md-button>
+
+            <md-button aria-label="Logout"
+                data-ng-click="vm.logout($event)"
+            >
+                <i class="mdi mdi-logout"></i>
+
+                Logout
+            </md-button>
+        </md-list-item>
+    </div>
+</md-toolbar>

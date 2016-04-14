@@ -1,0 +1,25 @@
+@import 'mixins';
+@import 'components';
+@import 'material';
+@import 'layout';
+
+html {
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  @include no-select();
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

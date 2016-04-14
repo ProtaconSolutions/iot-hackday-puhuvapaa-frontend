@@ -1,0 +1,19 @@
+@import 'mixins';
+
+$shadow-color-1: rgba(0, 0, 0, .2);
+$shadow-color-2: rgba(0, 0, 0, .14);
+$shadow-color-3: rgba(0, 0, 0, .12);
+
+.md-whiteframe-z3-opposite {
+  box-shadow: 0 -4px 5px -2px $shadow-color-1,
+    0 -7px 10px 1px $shadow-color-2,
+    0 -2px 16px 1px $shadow-color-3;
+}
+
+.md-toolbar-tools {
+  .md-button {
+    .mdi {
+      line-height: normal;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+bower_components/
+dist/*
+.tmp/
+.idea/
+src/app/config/config.js
+src/app/config/config.json
+src/app/config/package.js

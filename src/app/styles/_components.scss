@@ -1,0 +1,20 @@
+//
+// This file contains all 3rd party component style overrides in application.
+//
+@import 'mixins';
+
+#loading-bar {
+  .bar {
+    background: $primary-color-light;
+    height: 5px;
+  }
+}
+
+#loading-bar-spinner {
+  left: 5px;
+
+  .spinner-icon {
+    border-left-color: $primary-color-light;
+    border-top-color: $primary-color-light;
+  }
+}

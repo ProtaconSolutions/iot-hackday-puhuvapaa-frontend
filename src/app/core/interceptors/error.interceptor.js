@@ -61,6 +61,10 @@
         }
       }
 
+      if (response.status === -1) {
+        return $q.resolve(response);
+      }
+
       if (message) {
         $injector
           .get('$mdToast')

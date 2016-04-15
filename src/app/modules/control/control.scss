@@ -1,0 +1,15 @@
+md-card md-card-title {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+md-card {
+  h4 {
+    margin: 0;
+  }
+}
+
+md-card md-card-title md-card-title-text:only-child .md-subhead {
+  padding-top: 0;
+  line-height: 1;
+}

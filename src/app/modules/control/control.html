@@ -1,5 +1,5 @@
-<md-content class="md-padding text-center flex" flex layout="row" layout-wrap layout-align="center top">
-    <md-card flex="30" class="">
+<md-content class="text-center flex" flex layout="row" layout-wrap layout-align="center top">
+    <md-card flex="30" class="md-whiteframe-z3">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Molemmat silmät</span>
@@ -8,18 +8,29 @@
         </md-card-title>
         <md-card-content >
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Katso vasempaan</md-button>
-                <md-button class="md-primary md-raised">Katso oikeaan</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.eyesLeft()"
+                    data-ng-disabled="vm.eyeLeft == 0 && vm.eyeRight == 0"
+                >Vasempaan</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.eyesRight()"
+                    data-ng-disabled="vm.eyeLeft == 100 && vm.eyeRight == 100"
+                >Oikeaan</md-button>
             </div>
 
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Katse eteen - päin!</md-button>
-                <md-button class="md-primary md-raised">Katse kieroon</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.eyeLeft = 50; vm.eyeRight = 50;"
+                    data-ng-disabled="vm.eyeLeft == 50 && vm.eyeRight == 50"
+                >eteen - päin!</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.eyesRandom()"
+                >Random</md-button>
             </div>
         </md-card-content>
     </md-card>
 
-    <md-card flex="30" layout-align="center center">
+    <md-card flex="30" class="md-whiteframe-z3">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Silmät</span>
@@ -28,24 +39,34 @@
         </md-card-title>
         <md-card-content>
             <div layout="row" layout-align="center center">
-
                 <div layout="column" layout-align="center center">
                     <h4>Vasen silmä</h4>
-                    <md-button class="md-primary md-raised">Vasempaan</md-button>
-                    <md-button class="md-primary md-raised">Oikeaan</md-button>
+                    <md-button class="md-primary md-raised"
+                        data-ng-click="vm.eyeMove('eyeLeft', 0)"
+                        data-ng-disabled="vm.eyeLeft == 0"
+                    >Vasempaan</md-button>
+                    <md-button class="md-primary md-raised"
+                        data-ng-click="vm.eyeMove('eyeLeft', 1)"
+                        data-ng-disabled="vm.eyeLeft == 100"
+                    >Oikeaan</md-button>
                 </div>
 
                 <div layout="column" layout-align="center center">
                     <h4>Oikea silmä</h4>
-                    <md-button class="md-primary md-raised">Vasempaan</md-button>
-                    <md-button class="md-primary md-raised">Oikeaan</md-button>
+                    <md-button class="md-primary md-raised"
+                        data-ng-click="vm.eyeMove('eyeRight', 0)"
+                        data-ng-disabled="vm.eyeRight == 0"
+                    >Vasempaan</md-button>
+                    <md-button class="md-primary md-raised"
+                        data-ng-click="vm.eyeMove('eyeRight', 1)"
+                        data-ng-disabled="vm.eyeRight == 100"
+                    >Oikeaan</md-button>
                 </div>
             </div>
-
         </md-card-content>
     </md-card>
 
-    <md-card flex="30">
+    <md-card flex="30" class="md-whiteframe-z3">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Ripset</span>
@@ -54,18 +75,18 @@
         </md-card-title>
         <md-card-content>
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Neutraali</md-button>
-                <md-button class="md-primary md-raised">Random</md-button>
+                <md-button class="md-primary md-raised" data-ng-click="vm.moveSlash(1)">Neutraali</md-button>
+                <md-button class="md-primary md-raised" data-ng-click="vm.moveSlash(2)">Random</md-button>
             </div>
 
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Äkäinen</md-button>
-                <md-button class="md-primary md-raised">Hämmentynyt</md-button>
+                <md-button class="md-primary md-raised" data-ng-click="vm.moveSlash(3)">Äkäinen</md-button>
+                <md-button class="md-primary md-raised" data-ng-click="vm.moveSlash(4)">Hämmentynyt</md-button>
             </div>
         </md-card-content>
     </md-card>
 
-    <md-card flex="30">
+    <md-card flex="30" class="md-whiteframe-z3">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Let's "puhutaan"</span>
@@ -75,17 +96,26 @@
         <md-card-content>
             <md-input-container class="md-icon-float md-block">
                 <label>Tänään sanotaan:</label>
-                <input type="text" placeholder="On tämä saatana työmaa..." />
+                <input type="text" placeholder="On tämä saatana työmaa..."
+                    data-ng-model="vm.phrase"
+                    data-ng-keypress="vm.talkFast($event)"
+                />
             </md-input-container>
 
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Suomena</md-button>
-                <md-button class="md-primary md-raised">Lontoona</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.talk(vm.phrase, 'suomi')"
+                    data-ng-disabled="!vm.phrase"
+                >Suomena</md-button>
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.talk(vm.phrase, 'speech')"
+                    data-ng-disabled="!vm.phrase"
+                >Lontoona</md-button>
             </div>
         </md-card-content>
     </md-card>
 
-    <md-card flex="30">
+    <md-card flex="30" class="md-whiteframe-z3">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Autopilotti</span>
@@ -93,18 +123,61 @@
             </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <md-input-container class="md-icon-float md-block">
+            <md-input-container class="md-block">
+                <input type="number" placeholder="Laukomisväli sekunteina"
+                    data-ng-model="vm.autopilotInterval"
+                    data-ng-disabled="vm.autopilot"
+                />
+            </md-input-container>
+            <md-input-container class="md-block">
                 <label>Autopilotissa tänään:</label>
                 <textarea placeholder="On tämä saatana työmaa
 Protacon
 Kirjoittele useampi rivi
 ja paina 'aktivoi'
 "
+                    data-ng-model="vm.phrases"
+                    data-ng-list="&#10;"
+                    data-ng-trim="false"
+                    data-ng-disabled="vm.autopilot"
                 ></textarea>
             </md-input-container>
 
             <div layout="row" layout-align="center center">
-                <md-button class="md-primary md-raised">Aktivoi</md-button>
+                <md-button class="md-primary md-raised" aria-label="autopilot"
+                    data-ng-click="vm.toggleAutopilot()"
+                    data-ng-disabled="!vm.phrases"
+                >
+                    <span data-ng-if="!vm.autopilot">
+                        Laita päälle
+                    </span>
+
+                    <span data-ng-if="vm.autopilot">
+                        Pois päältä
+                    </span>
+                </md-button>
+            </div>
+        </md-card-content>
+    </md-card>
+
+    <md-card flex="30" class="md-whiteframe-z3">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Crazy!!1!</span>
+                <span class="md-subhead">Are you absolutely sure about this?</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <md-input-container class="md-icon-float md-block">
+                <input type="number" placeholder="Kauanko aikaa mennään huliviliä?"
+                    data-ng-model="vm.crazyTime"
+                />
+            </md-input-container>
+
+            <div layout="row" layout-align="center center">
+                <md-button class="md-primary md-raised"
+                    data-ng-click="vm.crazy(vm.crazyTime)"
+                >Let's go</md-button>
             </div>
         </md-card-content>
     </md-card>

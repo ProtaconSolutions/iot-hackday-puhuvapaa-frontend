@@ -42,11 +42,27 @@
             'content@': {
               templateUrl: '/talking-head-frontend/modules/control/control.html',
               controller: 'controlController',
-              controllerAs: 'vm'
+              controllerAs: 'vm',
+              resolve: {
+                _reset: _reset
+              }
             }
           }
         }
       }
     ];
+  }
+
+  //////////
+
+  /**
+   * @ngInject
+   *
+   * @param {*} ControlService
+   * @returns {*}
+   * @private
+   */
+  function _reset(ControlService) {
+    return ControlService.reset();
   }
 }());

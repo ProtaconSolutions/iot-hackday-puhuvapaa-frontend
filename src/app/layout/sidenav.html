@@ -1,0 +1,30 @@
+<md-toolbar class="md-whiteframe-z3">
+    <h1 class="md-toolbar-tools">
+        <md-list-item>
+            History
+        </md-list-item>
+
+        <span flex></span>
+
+        <md-list-item class="hide-gt-md">
+            <md-button class="md-icon-button md-button md-ink-ripple" aria-label="Toggle menu"
+                data-ng-click="vm.hideSideMenu()"
+            >
+                <i class="md-title mdi mdi-arrow-left-bold"></i>
+            </md-button>
+        </md-list-item>
+    </h1>
+</md-toolbar>
+
+<md-content class="flex" flex>
+    <md-list class="md-dense" flex>
+        <md-list-item class="md-2-line"
+            data-ng-repeat="history in vm.histories | orderBy: '-date'"
+        >
+            <div class="md-list-item-text" layout="column">
+                <h3>{{history.date | date: 'HH:mm:ss'}}</h3>
+                <h4>{{history.phrase}}</h4>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>
